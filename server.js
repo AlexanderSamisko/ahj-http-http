@@ -115,16 +115,21 @@ app.use(async (ctx, next) => {
 app.use(async (ctx, next) => {
   if (ctx.request.method === 'GET') {
     const actionAndValue = ctx.request.url.split('?')[1];
+    console.log(`url: ${ctx.request.url}`);
+    console.log(`actionAndValue: ${actionAndValue}`);
     const parts = actionAndValue.split('&');
+    console.log(`Parts: ${parts}`);
     const action = parts[0].split('=')[1];
     const value = {};
     for (let i = 1; i < parts.length; i += 1) {
-      const currentPair = parts[i].split('=');
-      value[currentPair[0]] = currentPair[1];
+      let currentPair = parts[i].split('=');
+      value[`${currentPair[0]}`] = currentPair[1];
     }
-
+    console.log("value:" + value);
     if (action === 'getDescription') {
       const ticketId = handler.findTicket(value);
+      console.log(`tickets: ${handler.tickets}`);
+      console.log(`ticketID: ${ticketId}`);
       ctx.response.body = {
         action: 'getDescription',
         ticket: {

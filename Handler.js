@@ -16,7 +16,8 @@ class Handler {
   }
 
   changeTicketStatus(value) {
-    const { id } = value;
+    let { id } = value;
+    id = +id;
     const { status } = value;
 
     for (let i = 0; i < this.tickets.length; i += 1) {
@@ -27,7 +28,9 @@ class Handler {
   }
 
   findTicket(value) {
-    const { id } = value;
+    let { id } = value;
+    id = +id;
+    console.log(typeof id);
     for (let i = 0; i < this.tickets.length; i += 1) {
       if (this.tickets[i].id === id) {
         return i;
@@ -36,7 +39,8 @@ class Handler {
   }
 
   removeTicket(value) {
-    const { id } = value;
+    let { id } = value;
+    id = +id;
     for (let i = 0; i < this.tickets.length; i += 1) {
       if (this.tickets[i].id === id) {
         this.tickets.splice(i, 1);
@@ -45,7 +49,8 @@ class Handler {
   }
 
   editTicket(value) {
-    const { id } = value;
+    let { id } = value;
+    id = +id;
     const { name } = value;
     const { description } = value;
     for (let i = 0; i < this.tickets.length; i += 1) {
