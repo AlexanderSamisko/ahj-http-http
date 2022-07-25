@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #999;
+    font-family: sans-serif;
+    font-size: 40px;
+    width: 100%;
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    padding: 2vh;
+}
+
+.desk {
+    width: 90%;
+    min-height: 50vh;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url('../img/desk.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    position: relative;
+}
+
+.desk-header {
+    width: 100%;
+    height: 7vh;
+    background-color: #dcdcdc;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.desk-header-dot {
+    width: 3vh;
+    height: 3vh;
+    background-color: #c9c8c9;
+    border-radius: 50%;
+    margin-left: 4vh;
+}
+
+.desk-create-ticket {
+    width: 20%;
+    border: 2px solid #999;
+    border-radius: 5px;
+    background-color: white;
+    margin-top: 7vh;
+    font-size: 70%;
+    color: #999;
+    margin-left: 70%;
+    padding: 1%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.desk-tickets {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    height: fit-content; 
+    margin-top: 7vh;
+}
+
+.creater-widget {
+    width: 50%;
+    height: 45%;
+    z-index: 4;
+    background-color: white;
+    border: 2px solid #c9c8c9;
+    border-radius: 6px;
+    left: 25%;
+    top: 35%;
+    color: #c9c8c9;
+}
+
+.create-ticket-header {
+    width: 100%;
+    height: 7vh;
+    
+    text-align: center;
+    font-size: 70%;
+    padding: 5px;
+}
+
+.create-ticket-form {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4vh;
+    font-size: 50%;
+}
+
+.create-ticket-label {
+    margin-top: 1vh;
+    display: block;
+}
+
+.create-ticket-input-name {
+    display: block;
+    margin-top: 1vh;
+    width: 100%;
+    height: 4vh;
+}
+
+.create-ticket-input-description {
+    display: block;
+    margin-top: 1vh;
+    width: 100%;
+    height: 8vh;
+}
+
+.create-ticket-button-block {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.create-ticket-button {
+    padding: 1vh;
+    margin-left: 2vh;
+    margin-top: 2vh;
+    border: 1px solid #c9c8c9;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+.ticket {
+    width: 100%;
+    height: fit-content;
+    color: #c9c8c9;  
+    cursor: help;
+    border: 2px solid #c9c8c9;
+}
+
+.ticket-main-part {
+    width: 100%;
+    display: flex;
+    height: fit-content;
+    padding: 2vh;
+    background-color: white;
+    justify-content: space-between;
+}
+
+.ticket-left-part {
+    display: flex;
+    width: 45%;
+    align-items: center;
+}
+
+.ticket-status {
+    width: 4vh;
+    background-color: white;
+    border-radius: 50%;
+    height: 4vh;
+    border: 1px solid #c9c8c9;
+    cursor: pointer;
+}
+
+.ticket-status[data-status="true"] {
+    background-image: url(../img/true.jpg);
+    background-position: left 2px top -2px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
+
+.ticket-name {
+    width: 35vw;
+    margin-left: 2vh;
+    font-size: 3vh;
+}
+
+.ticket-right-part {
+    display: flex;
+    width: 45%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.ticket-date {
+    width: 35vh;
+    margin-right: 2vh;
+    font-size: 3vh;
+}
+
+.ticket-edit {
+    width: 4vh;
+    background-color: white;
+    background-image: url(../img/edit.png);
+    background-position: left 3px top -4px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    height: 4vh;
+    border: 1px solid #c9c8c9;
+    margin-left: 3vh;
+    cursor: pointer;
+}
+
+.ticket-remove {
+    width: 4vh;
+    background-color: white;
+    background-image: url(../img/rip.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    height: 4vh;
+    border: 1px solid #c9c8c9;
+    margin-left: 2vh;
+    cursor: pointer;
+}
+
+.ticket-descript-part {
+    width: 100%;
+    height: fit-content;
+    padding: 2vh;
+    padding-left: 8vh;
+    background-color: white;
+    font-size: 3vh;
+}
